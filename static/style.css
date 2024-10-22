@@ -142,15 +142,27 @@ main {
     margin-top: 2%;
 }
 
-.categories {
-    position: static;
+.fixed-thing {
     margin-left: 10%;
     margin-top: 2%;
+}
+
+.categories {
+    position: static;
     width: 275px;
     height: 395px;
     border-radius: 15px;
     background-color: #0D0E11;
 
+}
+
+.other-categories {
+    margin-top: 5%;
+    position: static;
+    width: 275px;
+    height: 434px;
+    border-radius: 15px;
+    background-color: #0D0E11;
 }
 
 .slider {
@@ -172,7 +184,7 @@ main {
 .catalog {
     width: 99%;
     margin-left: auto;
-    height: 63.7%;
+    height: 83.15%;
     margin-top: auto;
     border-radius: 15px;
     background-color: #0D0E11;
