@@ -16,8 +16,8 @@
             <div class="logo">
                 <a href="{{  url_for('hello')  }}"><img src="{{ url_for('static', filename='logo.png') }}" alt="logo" /></a>
             </div>
-            <input style="margin-left: 24px; height: 65px; width: 106px;" class="header-button-active" id="catalog" type="submit" name="submit-action" value="Каталог" />
-            <input type="submit" name="submit-action" style="height: 65px; width: 124px;" class="header-button" id="auctions" value="Аукционы" />
+            <input style="margin-left: 24px; height: 65px; width: 106px;" class="header-button" id="catalog" type="submit" name="submit-action" value="Каталог" />
+            <input type="submit" name="submit-action" style="height: 65px; width: 124px;" class="header-button-active" id="auctions" value="Аукционы" />
             <input type="submit" name="submit-action" style="height: 65px; width: 158px;" class="header-button" id="bussiness" value="Для бизнеса" />
             <input type="submit" name="submit-action" style="height: 65px; width: 116px;" class="header-button" id="help" value="Помощь" />
         </form>
@@ -29,15 +29,6 @@
             <button class="buttons" id="settings"><img src="{{  url_for('static', filename='settings.png')  }}" alt="cart"></button>
         </form>
     </header>
-    <div class="fixed-thing">
-        <div class="categories"></div>
-        <div class="other-categories"></div>
-    </div>
-    <main>
-        <div class="slider"></div>
-        <div class="sales"></div>
-        <div class="catalog"></div>
-    </main>
     <footer>
         <div class="footer-left">
             <div class="logo">
@@ -47,8 +38,8 @@
             <h2>Политика конфиденциальности</h2>
         </div>
         <form action="" method="post" class="footer-right">
-            <input type="submit" name="submit-action" class="footer-btn-active" id="catalog-footer" value="Каталог">
-            <input type="submit" name="submit-action" class="footer-btn" id="auctions-footer" value="Аукционы">
+            <input type="submit" name="submit-action" class="footer-btn" id="catalog-footer" value="Каталог">
+            <input type="submit" name="submit-action" class="footer-btn-active" id="auctions-footer" value="Аукционы">
             <input type="submit" name="submit-action" class="footer-btn" id="bussiness-footer" value="Для бизнеса">
             <input type="submit" name="submit-action" class="footer-btn" id="help-footer" value="Помощь">
         </form>
