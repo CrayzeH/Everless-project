@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Каталог</title>
+    <script
+        src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous">
+    </script>
 </head>
 <body>
     <header>
@@ -30,6 +35,10 @@
         </form>
     </header>
     <div class="fixed-thing">
+        <div style="height: 395px" class="cata-invisible"></div>
+        <div style="height: 434px" class="cata-invisible"></div>
+    </div>
+    <div id="fixed">
         <div class="categories"></div>
         <div class="other-categories"></div>
     </div>
@@ -38,7 +47,7 @@
         <div class="sales"></div>
         <div class="catalog"></div>
     </main>
-    <footer>
+    <footer id="footer">
         <div class="footer-left">
             <div class="logo">
                 <a href="{{  url_for('hello')  }}"><img src="{{ url_for('static', filename='logo.png') }}" alt="logo" /></a>
@@ -53,5 +62,22 @@
             <input type="submit" name="submit-action" class="footer-btn" id="help-footer" value="Помощь">
         </form>
     </footer>
+    <script>
+        $(window).scroll(function () {
+        var scrollPosY = $(window).scrollTop();
+        console.log(isFixed)
+        if (scrollPosY >= 659) {
+            $(".other-categories").css({"position": "absolute", "top": "660px"});
+            $(".categories").css({"position": "absolute", "top": "660px"});
+            console.log(scrollPosY);
+        }
+        else {
+            console.log(isFixed);
+            $(".categories").css({"position": "fixed"});
+            $(".other-categories").css({"position": "fixed"});
+        }
+        });
+
+    </script>
 </body>
 </html>

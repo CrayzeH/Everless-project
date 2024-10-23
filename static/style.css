@@ -10,6 +10,7 @@ body {
 }
 
 header {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,6 +18,7 @@ header {
     height: 62px;
     background-color: #0D0E14;
     border-bottom: 2px solid #1F2233;
+    z-index: 100
 }
 
 .left-side {
@@ -25,6 +27,7 @@ header {
     width: 595px;
     height: 62px;
     margin-left: 32px;
+    z-index: 101;
 }
 
 .logo {
@@ -81,6 +84,7 @@ header {
     width: 475px;
     height: 62px;
     margin-right: 24px;
+    z-index: 101;
 }
 
 .registration {
@@ -142,7 +146,7 @@ main {
     width: 65%;
     background: transparent;
     height: 1500px;
-    margin-top: 2%;
+    margin-top: 5%;
 }
 
 .fixed-thing {
@@ -151,7 +155,7 @@ main {
 }
 
 .categories {
-    position: static;
+    position: fixed;
     width: 275px;
     height: 395px;
     border-radius: 15px;
@@ -159,11 +163,26 @@ main {
 
 }
 
-.other-categories {
-    margin-top: 5%;
+.cata-invisible {
     position: static;
     width: 275px;
-    height: 502px;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+#fixed {
+    position: absolute;
+    height: 1020px;
+    left: 10%;
+    top: 10%;
+    z-index: 50;
+}
+
+.other-categories {
+    margin-top: 407px;
+    position: fixed;
+    width: 275px;
+    height: 434px;
     border-radius: 15px;
     background-color: #0D0E11;
 }
