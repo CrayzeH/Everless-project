@@ -675,3 +675,117 @@ footer {
         }
     }
 }
+
+.login-container {
+    width: 100%;
+    margin-top: 10%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    .login-form {
+        display: flex;
+        background-color: #0D0E11;
+        border-radius: 15px;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 600px;
+        height: 475px;
+
+        h1 {    margin-top: -10px;
+            font-size: 48px;
+            font-weight: 750;
+            height: 10px;
+            font-family: 'Montserrat', sans-serif;
+            color: #2971ff;
+        }
+
+        .input-container {
+            width: 400px;
+            height: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        input {
+            outline: none;
+            background-color: transparent;
+            width: 400px;
+            height: 55px;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 22px;
+            color: #525B87;
+            border-bottom: 1px solid #C3DCFD;
+        }
+
+        input::placeholder {
+            font-size: 24px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            color: #525B87;
+        }
+
+        .reg-button {
+            width: 250px;
+            border: none;
+            outline: none;
+            height: 50px;
+            font-size: 18px;
+            background-color: #5d6798;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #0D0E11;
+        }
+    }
+}
+
+.profile-row {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+    .profile {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        .left-text-block {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 40%;
+            height: 100%;
+            img {
+                width: 250px;
+                height: 250px;
+                border-radius: 100px;
+            }
+            h1 {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 48px;
+                font-weight: 700;
+                color: #2971ff;
+            }
+            h2 {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 36px;
+                font-weight: 700;
+                color: #8cb8fe;
+            }
+        }
+        .right-items {
+            width: 57%;
+            height: 100%;
+            background-color: #0D0E11;
+            border-radius: 15px;
+        }
+    }
+}

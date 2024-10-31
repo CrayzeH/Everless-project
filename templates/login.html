@@ -29,16 +29,14 @@
             <button class="buttons" id="settings"><img src="{{  url_for('static', filename='settings.png')  }}" alt="cart"></button>
         </form>
     </header>
-    <div class="registr">
-        <form action="" method="post" class="reg-form">
-            <h1>Регистрация</h1>
+    <div class="login-container">
+        <form action="" method="post" class="login-form">
+            <h1>Войти</h1>
             <div class="input-container">
-                <input type="text" name="name" placeholder="Имя" required="required" />
-                <input type="text" name="phone" placeholder="Телефон" required="required" />
-                <input type="email" name="email" placeholder="Почта" required="required" />
+                <input type="text" name="email" placeholder="Почта или телефон" required="required" />
                 <input type="password" name="password" placeholder="Пароль" required="required" />
             </div>
-            <input name="confirm-registration" id="reg" class="reg-button" type="submit" value="Зарегистрироваться" />
+            <input name="confirm-autorization" id="log" class="reg-button" type="submit" value="Войти" />
         </form>
     </div>
     <footer>
