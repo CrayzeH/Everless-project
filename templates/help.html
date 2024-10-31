@@ -29,6 +29,23 @@
             <button class="buttons" id="settings"><img src="{{  url_for('static', filename='settings.png')  }}" alt="cart"></button>
         </form>
     </header>
+    <div class="main-container" style="height: 1500px !important;">
+        <div class="main">
+            <div class="services">
+                <div class="left-text">
+                    <h1>Техническая поддержка</h1>
+                    <h2>Данные для отправки формы берутся с вашего аккаунта. Вы не сможете отправить форму, если не зарегистрировались сайте.</h2>
+                </div>
+                <div class="right-image" style="width: 350px; height: 350px;">
+                    <img src="{{  url_for('static', filename='support.png')  }}" alt="service">
+                </div>
+            </div>
+            <form style="display: flex; justify-content: center; flex-wrap: wrap;">
+                <textarea class="help" placeholder="Опишите вашу проблему..."></textarea>
+                <button type="submit" class="confirm-button">Отправить форму</button>
+            </form>
+        </div>
+        </div>
     <footer>
         <div class="footer-left">
             <div class="logo">
@@ -40,8 +57,8 @@
         <form action="" method="post" class="footer-right">
             <input type="submit" name="submit-action" class="footer-btn" id="catalog-footer" value="Каталог">
             <input type="submit" name="submit-action" class="footer-btn" id="auctions-footer" value="Аукционы">
-            <input type="submit" name="submit-action" class="footer-btn" id="bussiness-footer" value="Для бизнеса">
-            <input type="submit" name="submit-action" class="footer-btn-active" id="help-footer" value="Помощь">
+            <input type="submit" name="submit-action" class="footer-btn-active" id="bussiness-footer" value="Для бизнеса">
+            <input type="submit" name="submit-action" class="footer-btn" id="help-footer" value="Помощь">
         </form>
     </footer>
 </body>

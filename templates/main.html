@@ -65,16 +65,14 @@
     <script>
         $(window).scroll(function () {
         var scrollPosY = $(window).scrollTop();
-        console.log(isFixed)
         if (scrollPosY >= 659) {
             $(".other-categories").css({"position": "absolute", "top": "660px"});
             $(".categories").css({"position": "absolute", "top": "660px"});
             console.log(scrollPosY);
         }
         else {
-            console.log(isFixed);
-            $(".categories").css({"position": "fixed"});
-            $(".other-categories").css({"position": "fixed"});
+            $(".categories").css({"position": "fixed", "top": "10%"});
+            $(".other-categories").css({"position": "fixed", "top": "10%"});
         }
         });
 

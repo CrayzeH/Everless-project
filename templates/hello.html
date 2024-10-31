@@ -29,26 +29,61 @@
             <button class="buttons" id="settings"><img src="{{  url_for('static', filename='settings.png')  }}" alt="cart"></button>
         </form>
     </header>
-    <div class="main-image"><img src="{{  url_for('static', filename='hands.png')  }}" alt="handshake"></div>
-    <h1 class="some-text">Everless - Веб-платформа, где вы можете размещать собственные объявления о продаже ваших вещей. Кроме того, вы можете выставлять вещи на аукцион на определённый срок</h1>
-    <div class="underline"></div>
-    <div class="adventages">
-        <div class="adv-block">
-            <img src="{{  url_for('static', filename='deal.png')  }}" alt="deal">
-            <h2>Более тысячи успешных сделок каждый день на протяжении года</h2>
-        </div>
-        <div class="adv-block">
-            <img src="{{  url_for('static', filename='people.png')  }}" alt="people">
-            <h2>Более четырёх миллионов зарегистрированных пользователей</h2>
-        </div>
-        <div class="adv-block">
-            <img src="{{  url_for('static', filename='secure.png')  }}" alt="secure">
-            <h2>Улучшенная защита данных пользователя и система блокировки мошенников</h2>
+    <div class="main-container">
+        <div class="main">
+            <div class="services">
+                <div class="left-text">
+                    <h1>Клиенты к вашим услугам</h1>
+                    <h2>На Everless ищут исполнителей для любых задач: от грузоперевозок до уборки в квартире. Разместите объявление и заказчики смогут связаться с вами по телефону или в чате, что уточнить детали или записаться.</h2>
+                </div>
+                <div class="right-image">
+                    <img src="{{  url_for('static', filename='services.png')  }}" alt="service">
+                </div>
+            </div>
+            <div class="reasons">
+                <div style="background-color: #13161F; color: #2C3762;" class="reason-block">
+                    <h1>Everless - лучший</h1>
+                    <h2>для привлечения заказчиков</h2>
+                </div>
+                <div style="background-color: #171C2B; color: #3E466F;" class="reason-block">
+                    <h1>Более 2 тысяч пользователей</h1>
+                    <h2>совершают покупки на Everless</h2>
+                </div>
+                <div style="background-color: #1E2337; color: #5C669B;" class="reason-block">
+                    <h1>Каждый третий заказчик</h1>
+                    <h2>ищет исполнителя на Everless</h2>
+                </div>
+            </div>
+            <h1 class="why-text">Почему Everless?</h1>
+            <div class="why">
+                <div style="background-color: #1E2337; color: #5C669B;" class="why-block">
+                    <img src="{{  url_for('static', filename='first-thing.png')  }}" alt="1">
+                    <h1>Для старта хватит одного объявления</h1>
+                    <h2>Разместите его - и заказчики смогут вас найти.</h2>
+                </div>
+                <div style="background-color: #171C2B; color: #3E466F" class="why-block">
+                    <img src="{{  url_for('static', filename='second-thing.png')  }}" alt="1">
+                    <h1>Спрос на услуги растёт</h1>
+                    <h2>За 2024 год пользователи Everless стали искать услуги на 30% чаще.</h2>
+                </div>
+                <div style="background-color: #13161F; color: #2C3762" class="why-block">
+                    <img src="{{  url_for('static', filename='third-thing.png')  }}" alt="1">
+                    <h1>Есть инструменты для продвижения</h1>
+                    <h2>Слайдеры с рекламой товаров, поднятие товаров в топ списка.</h2>
+                </div>
+            </div>
+            <div style="margin-top: 8%;" class="services">
+                <div class="left-text">
+                    <h1>Круглосуточная поддержка</h1>
+                    <h2>Everless всегда поможет с различными вопросами как клиентам, так и продавцам. Круглосуточная поддержка ответит на любой вопрос моментально.</h2>
+                </div>
+                <div class="right-image" style="width: 350px; height: 350px;">
+                    <img src="{{  url_for('static', filename='support.png')  }}" alt="service">
+                </div>
+            </div>
         </div>
     </div>
-    <div class="underline"></div>
-    <h1 class="some-text">По вопросам о рекламе, о малом бизнесе, о составлении объявлений продажи, об аукционах и о многом другом вы можете узнать на страницах “Для бизнеса” и “Помощь”</h1>
-    <footer>
+        <footer>
         <div class="footer-left">
             <div class="logo">
                 <img src="{{ url_for('static', filename='logo.png') }}" alt="logo" />
