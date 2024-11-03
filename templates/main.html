@@ -39,18 +39,92 @@
         <div style="height: 434px" class="cata-invisible"></div>
     </div>
     <div id="fixed">
-        <div class="categories"></div>
-        <div class="other-categories"></div>
+        <div class="categories">
+            <h1 class="cata-text">Все категории
+            </h1>
+            <div class="one-category">
+                <h1>Транспорт</h1>
+            </div>
+            <div class="one-category">
+                <h1>Недвижимость</h1>
+            </div>
+            <div class="one-category">
+                <h1>Работа</h1>
+            </div>
+            <div class="one-category">
+                <h1>Услуги</h1>
+            </div>
+            <div class="one-category">
+                <h1>Личные вещи</h1>
+            </div>
+            <div class="one-category">
+                <h1>Для дома и дачи</h1>
+            </div>
+            <div class="one-category">
+                <h1>Запчасти</h1>
+            </div>
+            <div class="one-category">
+                <h1>Электроника</h1>
+            </div>
+        </div>
+        <div class="other-categories">
+            <div class="one-category">
+                <h1>Аксессуары</h1>
+            </div>
+            <div class="one-category">
+                <h1>Бытовая техника</h1>
+            </div>
+            <div class="one-category">
+                <h1>Хобби</h1>
+            </div>
+            <div class="one-category">
+                <h1>Отдых</h1>
+            </div>
+            <div class="one-category">
+                <h1>Животные</h1>
+            </div>
+            <div class="one-category">
+                <h1>Бизнес</h1>
+            </div>
+            <div class="one-category">
+                <h1>Оборудование</h1>
+            </div>
+            <div class="one-category">
+                <h1>Аксессуары для животных</h1>
+            </div>
+            <div class="one-category">
+                <h1>Игры</h1>
+            </div>
+        </div>
     </div>
     <main>
-        <div class="slider"></div>
-        <div class="sales"></div>
-        <div class="catalog"></div>
+        <div class="slider">
+            <div class="slider-images">
+                <img src="{{  url_for('static', filename='slider-background.png')  }}" alt="1">
+                <img src="{{  url_for('static', filename='car-slider.jpg')  }}" alt="2">
+                <img src="{{  url_for('static', filename='bags.webp')  }}" alt="3">
+            </div>
+            <button class="first-button"><</button>
+            <button class="second-button">></button>
+        </div>
+        <div class="sales">
+            <img src="{{  url_for('static', filename='sale.png')   }}" alt="4">
+            <button class="sale-banner-button">Открыть</button>
+        </div>
+        <div class="catalog">
+            <div class="sort-container">
+                <div class="left-side-sort">
+                    <button class="by-name">
+                        По названию
+                    </button>
+                </div>
+            </div>
+        </div>
     </main>
     <footer id="footer">
         <div class="footer-left">
             <div class="logo">
-                <a href="{{  url_for('hello')  }}"><img src="{{ url_for('static', filename='logo.png') }}" alt="logo" /></a>
+                <a href="{{  url_for('hello')  }}"><img src="{{  url_for('static', filename='logo.png')  }}" alt="logo" /></a>
             </div>
             <a style="text-decoration: none;" href="{{  url_for('hello')  }}"><h1>Everless</h1></a>
             <h2>Политика конфиденциальности</h2>
@@ -64,18 +138,55 @@
     </footer>
     <script>
         $(window).scroll(function () {
+
         var scrollPosY = $(window).scrollTop();
         if (scrollPosY >= 659) {
+
             $(".other-categories").css({"position": "absolute", "top": "660px"});
             $(".categories").css({"position": "absolute", "top": "660px"});
             console.log(scrollPosY);
         }
+
         else {
+
             $(".categories").css({"position": "fixed", "top": "10%"});
             $(".other-categories").css({"position": "fixed", "top": "10%"});
         }
         });
 
+    </script>
+    <script>
+        const slider = document.querySelector('.slider-images');
+        const prevButton = document.querySelector('.first-button');
+        const nextButton = document.querySelector('.second-button');
+        const slides = Array.from(slider.querySelectorAll('img'));
+        const slideCount = slides.length;
+        let slideIndex = 0;
+
+        prevButton.addEventListener('click', showPreviousSlide);
+        nextButton.addEventListener('click', showNextSlide);
+
+        function showPreviousSlide() {
+        slideIndex = (slideIndex - 1 + slideCount) % slideCount;
+        updateSlider();
+        }
+
+        function showNextSlide() {
+        slideIndex = (slideIndex + 1) % slideCount;
+        updateSlider();
+        }
+
+        function updateSlider() {
+        slides.forEach((slide, index) => {
+            if (index === slideIndex) {
+            slide.style.display = 'block';
+            } else {
+            slide.style.display = 'none';
+            }
+        });
+        }
+
+updateSlider();
     </script>
 </body>
 </html>
