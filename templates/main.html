@@ -7,137 +7,172 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
     <title>Каталог</title>
     <script
-        src="https://code.jquery.com/jquery-3.6.3.js"
-        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
-        crossorigin="anonymous">
+            src="https://code.jquery.com/jquery-3.6.3.js"
+            integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+            crossorigin="anonymous">
     </script>
 </head>
 <body>
-    <header>
-        <form action="" method="post" class="left-side">
-            <div class="logo">
-                <a href="{{  url_for('hello')  }}"><img src="{{ url_for('static', filename='logo.png') }}" alt="logo" /></a>
-            </div>
-            <input style="margin-left: 24px; height: 65px; width: 106px;" class="header-button-active" id="catalog" type="submit" name="submit-action" value="Каталог" />
-            <input type="submit" name="submit-action" style="height: 65px; width: 124px;" class="header-button" id="auctions" value="Аукционы" />
-            <input type="submit" name="submit-action" style="height: 65px; width: 158px;" class="header-button" id="bussiness" value="Для бизнеса" />
-            <input type="submit" name="submit-action" style="height: 65px; width: 116px;" class="header-button" id="help" value="Помощь" />
-        </form>
-        <form action="" method="post" class="right-side">
-            <input name="submit-action" class="registration" id="registry" type='submit' value="Регистрация" />
-            <input name="submit-action" class="login" id="login" type='submit' value="Войти" />
-            <button class="buttons" id="cart"><img src="{{  url_for('static', filename='cart.png')  }}" alt="cart"></button>
-            <button class="buttons" id="notify"><img src="{{  url_for('static', filename='notify.png')  }}" alt="cart"></button>
-            <button class="buttons" id="settings"><img src="{{  url_for('static', filename='settings.png')  }}" alt="cart"></button>
-        </form>
-    </header>
-    <div class="fixed-thing">
-        <div style="height: 395px" class="cata-invisible"></div>
-        <div style="height: 434px" class="cata-invisible"></div>
-    </div>
-    <div id="fixed">
-        <div class="categories">
-            <h1 class="cata-text">Все категории
-            </h1>
-            <div class="one-category">
-                <h1>Транспорт</h1>
-            </div>
-            <div class="one-category">
-                <h1>Недвижимость</h1>
-            </div>
-            <div class="one-category">
-                <h1>Работа</h1>
-            </div>
-            <div class="one-category">
-                <h1>Услуги</h1>
-            </div>
-            <div class="one-category">
-                <h1>Личные вещи</h1>
-            </div>
-            <div class="one-category">
-                <h1>Для дома и дачи</h1>
-            </div>
-            <div class="one-category">
-                <h1>Запчасти</h1>
-            </div>
-            <div class="one-category">
-                <h1>Электроника</h1>
-            </div>
+<header>
+    <form action="" method="post" class="left-side">
+        <div class="logo">
+            <a href="{{  url_for('hello')  }}"><img src="{{ url_for('static', filename='logo.png') }}" alt="logo"/></a>
         </div>
-        <div class="other-categories">
-            <div class="one-category">
-                <h1>Аксессуары</h1>
-            </div>
-            <div class="one-category">
-                <h1>Бытовая техника</h1>
-            </div>
-            <div class="one-category">
-                <h1>Хобби</h1>
-            </div>
-            <div class="one-category">
-                <h1>Отдых</h1>
-            </div>
-            <div class="one-category">
-                <h1>Животные</h1>
-            </div>
-            <div class="one-category">
-                <h1>Бизнес</h1>
-            </div>
-            <div class="one-category">
-                <h1>Оборудование</h1>
-            </div>
-            <div class="one-category">
-                <h1>Аксессуары для животных</h1>
-            </div>
-            <div class="one-category">
-                <h1>Игры</h1>
-            </div>
+        <input style="margin-left: 24px; height: 65px; width: 106px;" class="header-button-active" id="catalog"
+               type="submit" name="submit-action" value="Каталог"/>
+        <input type="submit" name="submit-action" style="height: 65px; width: 124px;" class="header-button"
+               id="auctions" value="Аукционы"/>
+        <input type="submit" name="submit-action" style="height: 65px; width: 158px;" class="header-button"
+               id="bussiness" value="Для бизнеса"/>
+        <input type="submit" name="submit-action" style="height: 65px; width: 116px;" class="header-button" id="help"
+               value="Помощь"/>
+    </form>
+    <form action="" method="post" class="right-side">
+        <input name="submit-action" class="registration" id="registry" type='submit' value="Регистрация"/>
+        <input name="submit-action" class="login" id="login" type='submit' value="Войти"/>
+        <button class="buttons" id="cart"><img src="{{  url_for('static', filename='cart.png')  }}" alt="cart"></button>
+        <button class="buttons" id="notify"><img src="{{  url_for('static', filename='notify.png')  }}" alt="cart">
+        </button>
+        <button class="buttons" id="settings"><img src="{{  url_for('static', filename='settings.png')  }}" alt="cart">
+        </button>
+    </form>
+</header>
+<div class="fixed-thing">
+    <div style="height: 395px" class="cata-invisible"></div>
+    <div style="height: 434px" class="cata-invisible"></div>
+</div>
+<div id="fixed">
+    <div class="categories">
+        <h1 class="cata-text">Все категории
+        </h1>
+        <div class="one-category">
+            <h1>Транспорт</h1>
+        </div>
+        <div class="one-category">
+            <h1>Недвижимость</h1>
+        </div>
+        <div class="one-category">
+            <h1>Работа</h1>
+        </div>
+        <div class="one-category">
+            <h1>Услуги</h1>
+        </div>
+        <div class="one-category">
+            <h1>Личные вещи</h1>
+        </div>
+        <div class="one-category">
+            <h1>Для дома и дачи</h1>
+        </div>
+        <div class="one-category">
+            <h1>Запчасти</h1>
+        </div>
+        <div class="one-category">
+            <h1>Электроника</h1>
         </div>
     </div>
-    <main>
-        <div class="slider">
-            <div class="slider-images">
-                <img src="{{  url_for('static', filename='slider-background.png')  }}" alt="1">
-                <img src="{{  url_for('static', filename='car-slider.jpg')  }}" alt="2">
-                <img src="{{  url_for('static', filename='bags.webp')  }}" alt="3">
+    <div class="other-categories">
+        <div class="one-category">
+            <h1>Аксессуары</h1>
+        </div>
+        <div class="one-category">
+            <h1>Бытовая техника</h1>
+        </div>
+        <div class="one-category">
+            <h1>Хобби</h1>
+        </div>
+        <div class="one-category">
+            <h1>Отдых</h1>
+        </div>
+        <div class="one-category">
+            <h1>Животные</h1>
+        </div>
+        <div class="one-category">
+            <h1>Бизнес</h1>
+        </div>
+        <div class="one-category">
+            <h1>Оборудование</h1>
+        </div>
+        <div class="one-category">
+            <h1>Аксессуары для животных</h1>
+        </div>
+        <div class="one-category">
+            <h1>Игры</h1>
+        </div>
+    </div>
+</div>
+<main>
+    <div class="slider">
+        <div class="slider-images">
+            <img src="{{  url_for('static', filename='slider-background.png')  }}" alt="1">
+            <img src="{{  url_for('static', filename='car-slider.jpg')  }}" alt="2">
+            <img src="{{  url_for('static', filename='bags.webp')  }}" alt="3">
+        </div>
+        <button class="first-button"><</button>
+        <button class="second-button">></button>
+    </div>
+    <div class="sales">
+        <img src="{{  url_for('static', filename='sale.png')   }}" alt="4">
+        <button class="sale-banner-button">Открыть</button>
+    </div>
+    <div class="catalog">
+        <div class="sort-container">
+            <div class="left-side-sort">
+                <button class="by-name">
+                    По названию
+                </button>
+                <button class="lowest-high-price">
+                    Цена от
+                </button>
+                <button class="lowest-high-price">
+                    Цена до
+                </button>
             </div>
-            <button class="first-button"><</button>
-            <button class="second-button">></button>
-        </div>
-        <div class="sales">
-            <img src="{{  url_for('static', filename='sale.png')   }}" alt="4">
-            <button class="sale-banner-button">Открыть</button>
-        </div>
-        <div class="catalog">
-            <div class="sort-container">
-                <div class="left-side-sort">
-                    <button class="by-name">
-                        По названию
-                    </button>
-                </div>
+            <div class="right-side-sort">
+                <button class="left-right-arrow"><
+                </button>
+                <button class="page-number-choosed">1
+                </button>
+                <button class="page-number">2
+                </button>
+                <button class="page-number">3
+                </button>
+                <button class="page-number">4
+                </button>
+                <button class="page-number-none">...
+                </button>
+                <button class="page-number">24
+                </button>
+                <button class="left-right-arrow">>
+                </button>
             </div>
         </div>
-    </main>
-    <footer id="footer">
-        <div class="footer-left">
-            <div class="logo">
-                <a href="{{  url_for('hello')  }}"><img src="{{  url_for('static', filename='logo.png')  }}" alt="logo" /></a>
-            </div>
-            <a style="text-decoration: none;" href="{{  url_for('hello')  }}"><h1>Everless</h1></a>
-            <h2>Политика конфиденциальности</h2>
+        <div class="no-items">
+            <h1>В данный момент нет никаких объявлений</h1>
         </div>
-        <form action="" method="post" class="footer-right">
-            <input type="submit" name="submit-action" class="footer-btn-active" id="catalog-footer" value="Каталог">
-            <input type="submit" name="submit-action" class="footer-btn" id="auctions-footer" value="Аукционы">
-            <input type="submit" name="submit-action" class="footer-btn" id="bussiness-footer" value="Для бизнеса">
-            <input type="submit" name="submit-action" class="footer-btn" id="help-footer" value="Помощь">
-        </form>
-    </footer>
-    <script>
-        $(window).scroll(function () {
+    </div>
+</main>
+<footer id="footer">
+    <div class="footer-left">
+        <div class="logo">
+            <a href="{{  url_for('hello')  }}"><img src="{{  url_for('static', filename='logo.png')  }}"
+                                                    alt="logo"/></a>
+        </div>
+        <a style="text-decoration: none;" href="{{  url_for('hello')  }}"><h1>Everless</h1></a>
+        <h2>Политика конфиденциальности</h2>
+    </div>
+    <form action="" method="post" class="footer-right">
+        <input type="submit" name="submit-action" class="footer-btn-active" id="catalog-footer" value="Каталог">
+        <input type="submit" name="submit-action" class="footer-btn" id="auctions-footer" value="Аукционы">
+        <input type="submit" name="submit-action" class="footer-btn" id="bussiness-footer" value="Для бизнеса">
+        <input type="submit" name="submit-action" class="footer-btn" id="help-footer" value="Помощь">
+    </form>
+</footer>
+<script>
+    $(window).scroll(function () {
 
         var scrollPosY = $(window).scrollTop();
         if (scrollPosY >= 659) {
@@ -145,48 +180,46 @@
             $(".other-categories").css({"position": "absolute", "top": "660px"});
             $(".categories").css({"position": "absolute", "top": "660px"});
             console.log(scrollPosY);
-        }
-
-        else {
+        } else {
 
             $(".categories").css({"position": "fixed", "top": "10%"});
             $(".other-categories").css({"position": "fixed", "top": "10%"});
         }
-        });
+    });
 
-    </script>
-    <script>
-        const slider = document.querySelector('.slider-images');
-        const prevButton = document.querySelector('.first-button');
-        const nextButton = document.querySelector('.second-button');
-        const slides = Array.from(slider.querySelectorAll('img'));
-        const slideCount = slides.length;
-        let slideIndex = 0;
+</script>
+<script>
+    const slider = document.querySelector('.slider-images');
+    const prevButton = document.querySelector('.first-button');
+    const nextButton = document.querySelector('.second-button');
+    const slides = Array.from(slider.querySelectorAll('img'));
+    const slideCount = slides.length;
+    let slideIndex = 0;
 
-        prevButton.addEventListener('click', showPreviousSlide);
-        nextButton.addEventListener('click', showNextSlide);
+    prevButton.addEventListener('click', showPreviousSlide);
+    nextButton.addEventListener('click', showNextSlide);
 
-        function showPreviousSlide() {
+    function showPreviousSlide() {
         slideIndex = (slideIndex - 1 + slideCount) % slideCount;
         updateSlider();
-        }
+    }
 
-        function showNextSlide() {
+    function showNextSlide() {
         slideIndex = (slideIndex + 1) % slideCount;
         updateSlider();
-        }
+    }
 
-        function updateSlider() {
+    function updateSlider() {
         slides.forEach((slide, index) => {
             if (index === slideIndex) {
-            slide.style.display = 'block';
+                slide.style.display = 'block';
             } else {
-            slide.style.display = 'none';
+                slide.style.display = 'none';
             }
         });
-        }
+    }
 
-updateSlider();
-    </script>
+    updateSlider();
+</script>
 </body>
 </html>

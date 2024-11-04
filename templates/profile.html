@@ -7,56 +7,63 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
     <title>Каталог</title>
 </head>
 <body>
-    <header>
-        <form action="" method="post" class="left-side">
-            <div class="logo">
-                <a href="{{  url_for('hello')  }}"><img src="{{ url_for('static', filename='logo.png') }}" alt="logo" /></a>
-            </div>
-            <input style="margin-left: 24px; height: 65px; width: 106px;" class="header-button" id="catalog" type="submit" name="submit-action" value="Каталог" />
-            <input type="submit" name="submit-action" style="height: 65px; width: 124px;" class="header-button" id="auctions" value="Аукционы" />
-            <input type="submit" name="submit-action" style="height: 65px; width: 158px;" class="header-button" id="bussiness" value="Для бизнеса" />
-            <input type="submit" name="submit-action" style="height: 65px; width: 116px;" class="header-button" id="help" value="Помощь" />
-        </form>
-        <form action="" method="post" class="right-side">
-            <input name="submit-action" class="registration" id="registry" type='submit' value="Регистрация" />
-            <input name="submit-action" class="login" id="login" type='submit' value="Войти" />
-            <button class="buttons" id="cart"><img src="{{  url_for('static', filename='cart.png')  }}" alt="cart"></button>
-            <button class="buttons" id="notify"><img src="{{  url_for('static', filename='notify.png')  }}" alt="cart"></button>
-            <button class="buttons" id="settings"><img src="{{  url_for('static', filename='settings.png')  }}" alt="cart"></button>
-        </form>
-    </header>
-    <div class="profile-row">
-        <div class="profile">
-            <div class="left-text-block">
-                <img src="{{  url_for('static', filename='ava.png')  }}" alt="ava">
-                <h1>Егор Даедалус</h1>
-                <h2>Частное лицо</h2>
-                <h2>г. Оренбург</h2>
-                <h2>Телефон</h2>
-                <h2>Почта</h2>
-            </div>
-            <div class="right-items">
-            </div>
+<header>
+    <form action="" method="post" class="left-side">
+        <div class="logo">
+            <a href="{{  url_for('hello')  }}"><img src="{{ url_for('static', filename='logo.png') }}" alt="logo"/></a>
+        </div>
+        <input style="margin-left: 24px; height: 65px; width: 106px;" class="header-button" id="catalog" type="submit"
+               name="submit-action" value="Каталог"/>
+        <input type="submit" name="submit-action" style="height: 65px; width: 124px;" class="header-button"
+               id="auctions" value="Аукционы"/>
+        <input type="submit" name="submit-action" style="height: 65px; width: 158px;" class="header-button"
+               id="bussiness" value="Для бизнеса"/>
+        <input type="submit" name="submit-action" style="height: 65px; width: 116px;" class="header-button" id="help"
+               value="Помощь"/>
+    </form>
+    <form action="" method="post" class="right-side">
+        <input name="submit-action" class="registration" id="registry" type='submit' value="Регистрация"/>
+        <input name="submit-action" class="login" id="login" type='submit' value="Войти"/>
+        <button class="buttons" id="cart"><img src="{{  url_for('static', filename='cart.png')  }}" alt="cart"></button>
+        <button class="buttons" id="notify"><img src="{{  url_for('static', filename='notify.png')  }}" alt="cart">
+        </button>
+        <button class="buttons" id="settings"><img src="{{  url_for('static', filename='settings.png')  }}" alt="cart">
+        </button>
+    </form>
+</header>
+<div class="profile-row">
+    <div class="profile">
+        <div class="left-text-block">
+            <img src="{{  url_for('static', filename='ava.png')  }}" alt="ava">
+            <h1>Егор Даедалус</h1>
+            <h2>Частное лицо</h2>
+            <h2>г. Оренбург</h2>
+            <h2>Телефон</h2>
+            <h2>Почта</h2>
+        </div>
+        <div class="right-items">
         </div>
     </div>
-    <footer>
-        <div class="footer-left">
-            <div class="logo">
-                <a href="{{  url_for('hello')  }}"><img src="{{ url_for('static', filename='logo.png') }}" alt="logo" /></a>
-            </div>
-            <a style="text-decoration: none;" href="{{  url_for('hello')  }}"><h1>Everless</h1></a>
-            <h2>Политика конфиденциальности</h2>
+</div>
+<footer>
+    <div class="footer-left">
+        <div class="logo">
+            <a href="{{  url_for('hello')  }}"><img src="{{ url_for('static', filename='logo.png') }}" alt="logo"/></a>
         </div>
-        <form action="" method="post" class="footer-right">
-            <input type="submit" name="submit-action" class="footer-btn" id="catalog-footer" value="Каталог">
-            <input type="submit" name="submit-action" class="footer-btn" id="auctions-footer" value="Аукционы">
-            <input type="submit" name="submit-action" class="footer-btn-active" id="bussiness-footer" value="Для бизнеса">
-            <input type="submit" name="submit-action" class="footer-btn" id="help-footer" value="Помощь">
-        </form>
-    </footer>
+        <a style="text-decoration: none;" href="{{  url_for('hello')  }}"><h1>Everless</h1></a>
+        <h2>Политика конфиденциальности</h2>
+    </div>
+    <form action="" method="post" class="footer-right">
+        <input type="submit" name="submit-action" class="footer-btn" id="catalog-footer" value="Каталог">
+        <input type="submit" name="submit-action" class="footer-btn" id="auctions-footer" value="Аукционы">
+        <input type="submit" name="submit-action" class="footer-btn-active" id="bussiness-footer" value="Для бизнеса">
+        <input type="submit" name="submit-action" class="footer-btn" id="help-footer" value="Помощь">
+    </form>
+</footer>
 </body>
 </html>

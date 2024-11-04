@@ -7,6 +7,7 @@ from functions import add_user, check_user_by_email, check_user_by_phone
 app = Flask(__name__)
 app.secret_key = 'insanity'
 
+
 @app.route('/', methods=["GET", "POST"])
 def hello():
     if request.method == "POST":
@@ -23,6 +24,7 @@ def hello():
         elif request.form["submit-action"] == "Войти":
             return redirect(url_for('login'))
     return render_template('hello.html')
+
 
 @app.route('/catalog', methods=["GET", "POST"])
 def catalog():
@@ -41,6 +43,7 @@ def catalog():
             return redirect(url_for('login'))
     return render_template('main.html')
 
+
 @app.route('/auctions', methods=["GET", "POST"])
 def auctions():
     if request.method == "POST":
@@ -57,6 +60,7 @@ def auctions():
         elif request.form["submit-action"] == "Войти":
             return redirect(url_for('login'))
     return render_template('auctions.html')
+
 
 @app.route('/bussiness', methods=["GET", "POST"])
 def bussiness():
@@ -75,6 +79,7 @@ def bussiness():
             return redirect(url_for('login'))
     return render_template('bussiness.html')
 
+
 @app.route('/help', methods=["GET", "POST"])
 def help():
     if request.method == "POST":
@@ -91,6 +96,7 @@ def help():
         elif request.form["submit-action"] == "Войти":
             return redirect(url_for('login'))
     return render_template('help.html')
+
 
 @app.route('/registration', methods=["GET", "POST"])
 def registration():
@@ -130,6 +136,7 @@ def registration():
                     add_user(name, email, password, phone)
                     return redirect(url_for('profile'))
     return render_template('registration.html')
+
 
 @app.route('/login', methods=["GET", "POST"])
 def login():
@@ -175,6 +182,7 @@ def login():
                             print("NO")
     return render_template('login.html')
 
+
 @app.route("/profile", methods=["GET", "POST"])
 def profile():
     if request.method == "POST":
@@ -192,6 +200,7 @@ def profile():
             elif request.form["submit-action"] == "Войти":
                 return redirect(url_for('login'))
     return render_template("profile.html")
+
 
 if __name__ == '__main__':
     app.run()
