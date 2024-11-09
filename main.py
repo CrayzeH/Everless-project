@@ -8,6 +8,11 @@ app = Flask(__name__)
 app.secret_key = 'insanity'
 
 
+@app.route('/process', methods=['POST'])
+def process():
+    data = request.form.get('data')
+    return data
+
 @app.route('/', methods=["GET", "POST"])
 def hello():
     if request.method == "POST":

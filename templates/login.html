@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
+    <script src="{{ url_for('static', filename='jquery-3.7.1.slim.min.js') }}"></script>
     <title>Каталог</title>
 </head>
 <body>
-<header>
+<header id="header">
     <form action="" method="post" class="left-side">
         <div class="logo">
             <a href="{{  url_for('hello')  }}"><img src="{{ url_for('static', filename='logo.png') }}" alt="logo"/></a>
@@ -26,15 +27,25 @@
         <input type="submit" name="submit-action" style="height: 65px; width: 116px;" class="header-button" id="help"
                value="Помощь"/>
     </form>
-    <form action="" method="post" class="right-side">
-        <input name="submit-action" class="registration" id="registry" type='submit' value="Регистрация"/>
-        <input name="submit-action" class="login" id="login" type='submit' value="Войти"/>
-        <button class="buttons" id="cart"><img src="{{  url_for('static', filename='cart.png')  }}" alt="cart"></button>
-        <button class="buttons" id="notify"><img src="{{  url_for('static', filename='notify.png')  }}" alt="cart">
+ <div class="right-side">
+        <form action="" method="post">
+            <input name="submit-action" class="registration" id="registry" type='submit' value="Регистрация"/>
+            <input name="submit-action" class="login" id="login" type='submit' value="Войти"/>
+        </form>
+        <button class="buttons" id="cart"><img class="showed" src="{{  url_for('static', filename='cart.png')  }}"
+                                               alt="cart">
+            <img class="hidden" src="{{  url_for('static', filename='cart-black.png')  }}" alt="cart">
         </button>
-        <button class="buttons" id="settings"><img src="{{  url_for('static', filename='settings.png')  }}" alt="cart">
+        <button class="buttons"><img id="notify" class="showed" src="{{  url_for('static', filename='theme.png')  }}"
+                                     alt="cart">
+            <img id="notify-2" class="hidden" src="{{  url_for('static', filename='theme-black.png')  }}" alt="cart">
         </button>
-    </form>
+        <button class="buttons" id="settings"><img class="showed"
+                                                   src="{{  url_for('static', filename='settings.png')  }}" alt="cart">
+            <img class="hidden" src="{{  url_for('static', filename='settings-black.png')  }}" alt="cart">
+        </button>
+        <div id="output"></div>
+    </div>
 </header>
 <div class="login-container">
     <form action="" method="post" class="login-form">
@@ -46,13 +57,15 @@
         <input name="confirm-autorization" id="log" class="reg-button" type="submit" value="Войти"/>
     </form>
 </div>
-<footer>
+<footer id="foot">
     <div class="footer-left">
-        <div class="logo">
-            <a href="{{  url_for('hello')  }}"><img src="{{ url_for('static', filename='logo.png') }}" alt="logo"/></a>
+       <div class="first-foot">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="logo"/>
+            </div>
+            <h1>Everless</h1>
         </div>
-        <a style="text-decoration: none;" href="{{  url_for('hello')  }}"><h1>Everless</h1></a>
-        <h2>Политика конфиденциальности</h2>
+        <h2 id="polit">Политика конфиденциальности</h2>
     </div>
     <form action="" method="post" class="footer-right">
         <input type="submit" name="submit-action" class="footer-btn" id="catalog-footer" value="Каталог">
@@ -61,5 +74,6 @@
         <input type="submit" name="submit-action" class="footer-btn" id="help-footer" value="Помощь">
     </form>
 </footer>
+<script src="{{  url_for('static', filename='change-themes.js')  }}"></script>
 </body>
 </html>
