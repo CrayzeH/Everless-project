@@ -27,7 +27,7 @@
         <input type="submit" name="submit-action" style="height: 65px; width: 116px;" class="header-button" id="help"
                value="Помощь"/>
     </form>
- <div class="right-side">
+    <div class="right-side">
         <form action="" method="post">
             <input name="submit-action" class="registration" id="registry" type='submit' value="Регистрация"/>
             <input name="submit-action" class="login" id="login" type='submit' value="Войти"/>
@@ -49,17 +49,17 @@
 </header>
 <div class="login-container">
     <form action="" method="post" class="login-form">
-        <h1>Войти</h1>
+        <h1>Вход</h1>
         <div class="input-container">
-            <input type="text" name="email" placeholder="Почта или телефон" required="required"/>
-            <input type="password" name="password" placeholder="Пароль" required="required"/>
+            <input id="login-one" type="text" name="email" placeholder="Почта или телефон" required="required"/>
+            <input id="login-two" type="password" name="password" placeholder="Пароль" required="required"/>
         </div>
         <input name="confirm-autorization" id="log" class="reg-button" type="submit" value="Войти"/>
     </form>
 </div>
 <footer id="foot">
     <div class="footer-left">
-       <div class="first-foot">
+        <div class="first-foot">
             <div class="logo">
                 <img src="{{ url_for('static', filename='logo.png') }}" alt="logo"/>
             </div>

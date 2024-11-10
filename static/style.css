@@ -1042,7 +1042,8 @@ footer {
             img {
                 width: 250px;
                 height: 250px;
-                border-radius: 100px;
+                border-radius: 250px;
+                border: 2px solid black;
             }
 
             h1 {
@@ -1194,4 +1195,23 @@ footer {
     h1 {
         color: black;
     }
+}
+
+.one-category-white {
+    border-color: #272B3F;
+    background: white;
+    h1 {
+        color: #1C202F;
+    }
+}
+
+.login-form-white {
+    background-color: #8CB8FE;
+}
+.reg-button-white {
+    background-color: #d2e2ff;
+}
+
+.reg-form-white {
+    background-color: #8cb8fe;
 }
