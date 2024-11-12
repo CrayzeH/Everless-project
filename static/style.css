@@ -121,6 +121,10 @@ header {
         height: 95%;
         border-radius: 15px;
 
+        div {
+            width: 90%;
+        }
+
         h1 {
             font-family: 'Montserrat', sans-serif;
             font-size: 32px;
@@ -377,6 +381,49 @@ main {
     outline: none;
 }
 
+#first-rb {
+    div {
+        height: 70px;
+    }
+
+    h1 {
+        font-size: 26px;
+        max-height: 39px;
+    }
+
+    h2 {
+        font-size: 18px;
+        max-height: 39px;
+        text-align: left;
+    }
+}
+
+#second-rb {
+    h1 {
+        font-size: 26px;
+        max-height: 39px;
+    }
+
+    h2 {
+        font-size: 18px;
+        max-height: 39px;
+        text-align: left;
+    }
+}
+
+#third-rb {
+    h1 {
+        font-size: 26px;
+        max-height: 39px;
+    }
+
+    h2 {
+        font-size: 18px;
+        max-height: 39px;
+        text-align: left;
+    }
+}
+
 .confirm-button {
     margin-top: 3%;
     width: 350px;
@@ -479,6 +526,11 @@ main {
     outline: none;
     border: none;
     z-index: 99;
+}
+
+#bss {
+    height: 300px;
+    margin-top: 6%;
 }
 
 .sort-container {
@@ -596,7 +648,7 @@ main {
 .first-button,
 .second-button {
     position: absolute;
-    top: 22%;
+    top: 215px;
     transform: translateY(-50%);
     width: 32px;
     height: 32px;
@@ -610,7 +662,7 @@ main {
 .first-button-slider,
 .second-button-slider {
     position: absolute;
-    top: 27%;
+    top: 265px;
     transform: translateY(-50%);
     width: 32px;
     height: 32px;
@@ -830,6 +882,10 @@ footer {
         text-decoration: underline;
         margin-left: 25px;
     }
+}
+
+#help-main {
+    height: 1500px !important;
 }
 
 .footer-right {
@@ -1130,6 +1186,10 @@ footer {
     border: 1px solid black;
 }
 
+#main-bss {
+    height: 1675px;
+}
+
 .white-log-reg-button:hover {
     border: 1px solid black;
     background-color: #d3d3d3;
@@ -1200,6 +1260,7 @@ footer {
 .one-category-white {
     border-color: #272B3F;
     background: white;
+
     h1 {
         color: #1C202F;
     }
@@ -1208,10 +1269,491 @@ footer {
 .login-form-white {
     background-color: #8CB8FE;
 }
+
 .reg-button-white {
     background-color: #d2e2ff;
 }
 
 .reg-form-white {
     background-color: #8cb8fe;
+}
+
+@media (max-width: 467px) {
+    header {
+        height: 40px;
+    }
+
+    .logo {
+        width: 28px;
+        height: 31px;
+
+        img {
+            width: 28px;
+            height: 31px;
+        }
+    }
+
+    .left-side {
+        width: 150px;
+
+        input {
+            font-size: 0.26rem;
+            width: 39px !important;
+        }
+    }
+
+    .right-side {
+        width: 170px;
+
+    }
+
+    .registration {
+        height: 20px;
+        width: 45px;
+        border-width: 1px;
+        font-size: 4.5px;
+    }
+
+    .login {
+        font-size: 6px;
+        height: 20px;
+        width: 35px;
+        border-width: 1px;
+        margin-left: 5px;
+    }
+
+    .buttons {
+        height: 20px;
+        width: 20px;
+        border-width: 1px;
+
+        img {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    .services {
+        height: 160px;
+
+        .left-text {
+            width: 180px;
+            height: 100%;
+
+            h1 {
+                font-size: 10px;
+                width: 120px;
+                line-height: 20px;
+            }
+
+            h2 {
+                font-size: 8px;
+                width: 190px;
+                line-height: 15px;
+            }
+        }
+
+        .right-image {
+            width: 150px;
+            height: 150px !important;
+
+            image {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .reasons {
+        height: 100px !important;
+
+        .reason-block {
+            div {
+                display: flex;
+                justify-content: center;
+                height: 30px;
+            }
+
+            h1 {
+                font-size: 8px;
+                line-height: 15px;
+            }
+
+            h2 {
+                font-size: 6px;
+                line-height: 15px;
+            }
+
+            img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+
+    .why-text {
+        font-size: 13px;
+        height: 20px !important;
+    }
+
+    .why {
+        margin-top: 0;
+        height: 130px;
+
+        .why-block {
+            h1 {
+                font-size: 6px;
+                line-height: 9px;
+            }
+
+            h2 {
+                font-size: 5px;
+                line-height: 9px;
+            }
+        }
+    }
+
+    .main-container {
+        height: 700px;
+    }
+
+    .first-foot {
+        width: 150px;
+        height: 40px !important;
+    }
+
+    footer {
+        height: 100px;
+    }
+
+    .footer-left {
+        height: 80px !important;
+        width: 200px !important;
+
+        h1 {
+            margin-left: 15px;
+            width: 40px;
+            font-size: 13px;
+        }
+
+        h2 {
+            height: 15px !important;
+            font-size: 8px;
+        }
+    }
+
+    .footer-right {
+        justify-content: space-evenly;
+        width: 300px !important;
+        height: 100px !important;
+
+        input {
+            width: 100px;
+            text-align: start;
+            font-size: 10px;
+        }
+    }
+
+    .header-button {
+        height: 40px !important;
+    }
+
+    .header-button-active {
+        height: 40px !important;
+    }
+
+    #bss {
+        height: 104px !important;
+    }
+
+    .reason-block {
+        height: 120px !important;
+    }
+
+    #first-rb {
+        height: 94px !important;
+
+        div {
+            height: 20px;
+            margin-top: -2px;
+        }
+
+        h1 {
+            font-size: 7px !important;
+            max-height: 15px !important;
+            min-height: 15px !important;
+            line-height: 9px !important;
+        }
+
+        h2 {
+            line-height: 8px !important;
+            max-height: 15px !important;
+            font-size: 5px !important;
+        }
+    }
+
+    #second-rb {
+        height: 94px !important;
+
+        div {
+            height: 20px;
+            margin-top: -2px;
+        }
+
+        h1 {
+            font-size: 7px !important;
+            max-height: 15px !important;
+            min-height: 15px !important;
+            line-height: 9px !important;
+        }
+
+        h2 {
+            line-height: 9px !important;
+            max-height: 15px;
+            font-size: 5px !important;
+        }
+    }
+
+    #third-rb {
+        height: 94px !important;
+
+        div {
+            height: 20px;
+            margin-top: -2px;
+        }
+
+        h1 {
+            font-size: 7px !important;
+            max-height: 15px !important;
+            min-height: 15px !important;
+            line-height: 9px !important;
+        }
+
+        h2 {
+            line-height: 9px !important;
+            max-height: 15px;
+            font-size: 5px !important;
+        }
+    }
+
+    .what-to-sell {
+        height: 110px !important;
+
+        .sell-block {
+            justify-content: center;
+        }
+
+        img {
+            width: 40%;
+            height: 20%;
+        }
+
+        div {
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        h1 {
+            font-size: 6px !important;
+            height: 10px !important;
+        }
+
+        h2 {
+            line-height: 7px !important;
+            height: 10px !important;
+            font-size: 4px !important;
+        }
+    }
+
+    #main-bss {
+        height: 500px !important;
+    }
+
+    .help {
+        height: 175px !important;
+        padding: 5px !important;
+    }
+
+    .help::placeholder {
+        font-size: 9px;
+    }
+
+    .confirm-button {
+        width: 135px;
+        height: 40px;
+        font-size: 9px;
+    }
+
+    #help-main {
+        height: 440px !important;
+    }
+
+    .registr {
+        height: 385px !important;
+        margin-top: 50px !important;
+    }
+
+    .reg-form {
+        width: 300px !important;
+        height: 350px !important;
+
+        h1 {
+            font-size: 18px !important;
+            height: 20px !important;
+        }
+
+        .input-container {
+            height: 150px !important;
+        }
+
+        input {
+            width: 200px !important;
+            height: 30px !important;
+        }
+
+        input::placeholder {
+            font-size: 14px !important;
+        }
+
+        .reg-button {
+            font-size: 12px !important;
+        }
+    }
+
+    .login-container {
+        height: 275px !important;
+        margin-top: 80px !important;
+    }
+
+    .login-form {
+        width: 300px !important;
+        height: 250px !important;
+
+        h1 {
+            font-size: 18px !important;
+            height: 20px !important;
+        }
+
+        .input-container {
+            height: 80px !important;
+        }
+
+        input {
+            width: 200px !important;
+            height: 30px !important;
+        }
+
+        input::placeholder {
+            font-size: 14px !important;
+        }
+
+        .reg-button {
+            font-size: 12px !important;
+        }
+    }
+
+    .auctions {
+        margin-top: 60px !important;
+    }
+
+    .slider-auctions {
+        height: 85px !important;
+    }
+
+    .first-button-slider {
+        width: 15px !important;
+        height: 15px !important;
+        border-width: 1px !important;
+        font-size: 9px !important;
+        display: flex;
+        justify-content: center;
+        border-radius: 3px !important;
+        left: 100px;
+        top: 100px;
+    }
+
+    .second-button-slider {
+        width: 15px !important;
+        height: 15px !important;
+        border-width: 1px !important;
+        font-size: 9px !important;
+        display: flex;
+        justify-content: center;
+        border-radius: 3px !important;
+        right: 100px;
+        top: 100px;
+    }
+
+    .by-name {
+        width: 70px !important;
+        height: 20px !important;
+        font-size: 6px !important;
+        border-width: 1px !important;
+    }
+
+    .left-side-sort {
+        width: 100px !important;
+    }
+
+    .lowest-high-price {
+        width: 50px !important;
+        height: 20px !important;
+        font-size: 6px !important;
+        border-width: 1px !important;
+    }
+
+    .sort-container {
+        padding: 10px !important;
+
+        .right-side-sort {
+            display: flex;
+            justify-content: space-between;
+            width: 150px;
+            flex-wrap: nowrap !important;
+        }
+    }
+
+    .auctions {
+        height: 530px !important;
+    }
+
+    .auction-main {
+        height: 450px !important;
+    }
+
+    .left-right-arrow {
+        width: 15px !important;
+        height: 15px !important;
+        border-radius: 2px !important;
+        font-size: 5px !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .no-items {
+        h1 {
+            font-size: 18px !important;
+        }
+    }
+
+    .page-number {
+        width: 15px !important;
+        height: 15px !important;
+        font-size: 5px !important;
+    }
+
+    .page-number-choosed {
+        width: 15px !important;
+        height: 15px !important;
+        font-size: 5px !important;
+        border-radius: 2px !important;
+    }
+
+    .page-number-none {
+        width: 15px !important;
+        height: 15px !important;
+        font-size: 5px !important;
+    }
 }

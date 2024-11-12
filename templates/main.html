@@ -18,13 +18,13 @@
         <div class="logo">
             <a href="{{  url_for('hello')  }}"><img src="{{ url_for('static', filename='logo.png') }}" alt="logo"/></a>
         </div>
-        <input style="margin-left: 24px; height: 65px; width: 106px;" class="header-button-active" id="catalog"
+        <input style="margin-left: 24px; height: 65px; width: 158px;" class="header-button-active" id="catalog"
                type="submit" name="submit-action" value="Каталог"/>
-        <input type="submit" name="submit-action" style="height: 65px; width: 124px;" class="header-button"
+        <input type="submit" name="submit-action" style="height: 65px; width: 158px;" class="header-button"
                id="auctions" value="Аукционы"/>
         <input type="submit" name="submit-action" style="height: 65px; width: 158px;" class="header-button"
                id="bussiness" value="Для бизнеса"/>
-        <input type="submit" name="submit-action" style="height: 65px; width: 116px;" class="header-button" id="help"
+        <input type="submit" name="submit-action" style="height: 65px; width: 158px;" class="header-button" id="help"
                value="Помощь"/>
     </form>
     <div class="right-side">
@@ -195,39 +195,7 @@
     });
 
 </script>
-<script>
-    const slider = document.querySelector('.slider-images');
-    const prevButton = document.querySelector('.first-button');
-    const nextButton = document.querySelector('.second-button');
-    const slides = Array.from(slider.querySelectorAll('img'));
-    const slideCount = slides.length;
-    let slideIndex = 0;
-
-    prevButton.addEventListener('click', showPreviousSlide);
-    nextButton.addEventListener('click', showNextSlide);
-
-    function showPreviousSlide() {
-        slideIndex = (slideIndex - 1 + slideCount) % slideCount;
-        updateSlider();
-    }
-
-    function showNextSlide() {
-        slideIndex = (slideIndex + 1) % slideCount;
-        updateSlider();
-    }
-
-    function updateSlider() {
-        slides.forEach((slide, index) => {
-            if (index === slideIndex) {
-                slide.style.display = 'block';
-            } else {
-                slide.style.display = 'none';
-            }
-        });
-    }
-
-    updateSlider();
-</script>
+<script src="{{  url_for('static', filename='slider-two.js')  }}"></script>
 <script src="{{  url_for('static', filename='change-themes.js')  }}"></script>
 </body>
 </html>
