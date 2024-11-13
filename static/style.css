@@ -254,6 +254,14 @@ header {
     margin-left: 32px;
 }
 
+.fixed-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
 .header-button {
     transition: 0.4s;
     display: flex;
@@ -1445,7 +1453,7 @@ footer {
     .footer-right {
         justify-content: space-evenly;
         width: 300px !important;
-        height: 100px !important;
+        height: 90px !important;
 
         input {
             width: 100px;
@@ -1755,5 +1763,120 @@ footer {
         width: 15px !important;
         height: 15px !important;
         font-size: 5px !important;
+    }
+
+    .categories {
+        display: none;
+    }
+
+    .other-categories {
+        display: none;
+    }
+
+    .cata-invisible {
+        display: none;
+    }
+
+    .slider {
+        height: 82px !important;
+        border-radius: 6px !important;
+    }
+
+    .sales {
+        height: 82px !important;
+        border-radius: 6px !important;
+    }
+
+    main {
+        margin-top: 60px !important;
+        height: 450px;
+    }
+
+    .first-button {
+        width: 15px !important;
+        height: 15px !important;
+        border-width: 1px !important;
+        font-size: 9px !important;
+        display: flex;
+        justify-content: center;
+        border-radius: 3px !important;
+        left: 90px;
+        top: 100px;
+    }
+
+    .second-button {
+        width: 15px !important;
+        height: 15px !important;
+        border-width: 1px !important;
+        font-size: 9px !important;
+        display: flex;
+        justify-content: center;
+        border-radius: 3px !important;
+        right: 194px;
+        top: 100px;
+    }
+
+    .sale-banner-button {
+        width: 40px;
+        height: 15px;
+        border-radius: 3px;
+        font-size: 6px;
+        top: 120px;
+        right: 125px;
+    }
+
+    .catalog {
+        height: 350px;
+    }
+
+    #main-cata {
+        display: flex;
+        justify-content: center;
+    }
+
+    .fixed-thing {
+        display: none;
+    }
+
+    .left-text-block {
+        height: 200px !important;
+
+        img {
+            width: 50px !important;
+            height: 50px !important;
+        }
+
+        h1 {
+            font-size: 12px !important;
+        }
+
+        h2 {
+            font-size: 8px !important;
+        }
+    }
+
+    .profile-row {
+        height: 270px !important;
+        margin-top: 100px !important;
+    }
+    .right-items {
+        justify-content: flex-start;
+        height: 220px !important;
+    }
+    .top-adds {
+        height: 55px;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .no-adds {
+        margin: 0;
+        font-size: 8px;
+    }
+    .add-item {
+        height: 20px;
+        width: 70px;
+        border-width: 1px;
+        border-radius: 3px;
+        font-size: 4px;
     }
 }
